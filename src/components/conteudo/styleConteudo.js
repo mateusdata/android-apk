@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 const styleConteudo = StyleSheet.create({
     p: {
         fontSize: 36,
-        color: "red",
+        color: "#aa0fa0",
         textAlign: "center",
         lineHeight: 50, // afasta a linha do texto
         letterSpacing: 5, // afasta entre as letras
@@ -18,7 +18,7 @@ const styleConteudo = StyleSheet.create({
         borderWidth: 8,
         borderStyle: "solid",
         borderTopColor: "pink",
-        borderLeftColor: "red",
+        borderLeftColor: "#aa0fa0",
         borderBottomColor: "pink",
         borderRightColor: "green",
         padding: 16,

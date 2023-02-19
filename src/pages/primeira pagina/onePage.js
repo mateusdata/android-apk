@@ -1,19 +1,25 @@
-
 import React from "react";
-import { StyleSheet, Text, View, Image, Button } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  Button,
+  ScrollView,
+} from "react-native";
 import Conteudo from "../../../src/components/conteudo/conteudo";
 import Engloba from "../../../src/components/engloba/engloba";
 import Header from "../../../src/components/header/header";
 
-
-
 const OnePage = () => {
   return (
     <View style={style.text}>
-      <Header />
-      <Engloba>
-        <Conteudo/>
-      </Engloba>
+      <ScrollView>
+        <Header />
+        <Engloba>
+          <Conteudo />
+        </Engloba>
+      </ScrollView>
     </View>
   );
 };

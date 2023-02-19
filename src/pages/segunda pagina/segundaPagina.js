@@ -1,7 +1,8 @@
 import react from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
-import { Header } from "react-native/Libraries/NewAppScreen";
+
 import Engloba from "../../components/engloba/engloba";
+import Header from "../../components/header/header";
 
 const SegundaPagina = (props) => {
   return (

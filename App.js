@@ -17,6 +17,7 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
+import SetimaPagina from "./src/pages/setima pagina/setimaPagina";
 
 const Abas = createBottomTabNavigator();
 const Drawer = createDrawerNavigator();
@@ -29,6 +30,17 @@ export default function App() {
         tabBarActiveBackgroundColor:"orange", //aqui altera a cor de fundo quando o icone esta ativado
         tabBarLabelPosition:"below-icon"|| " beside-icon", //aqui é pra colocar o texto embaixo oudo lado do componete 
         //estilizar a barra de titulo
+        headerShown: true || false, //aqui oculta ou mostra a  barra de titulo
+        headerTitleAlign:"center",
+        headerStyle:{
+          backgroundColor:"yellow",
+          height: 85
+        },
+        headerTitleStyle:{
+          color:"blue",
+          fontSize:30,
+          fontWeight:"bold"
+        },
         tabBarStyle:{ 
           backgroundColor:"#205067", //cor do fundo do menu das rotas
           height:100,
@@ -45,7 +57,7 @@ export default function App() {
         }
       }}>
         <Drawer.Screen
-          name="OnsePage"
+          name="Primeira pagina"
           component={OnePage}
           options={{
             tabBarIcon: ({ color }) => (
@@ -85,7 +97,7 @@ export default function App() {
           }}
         />
         <Drawer.Screen
-          name="segunda Pagina"
+          name="Rota entre telas pelos botões"
           component={SegundaPagina}
           options={{
             tabBarIcon: ({ color }) => (
@@ -94,7 +106,7 @@ export default function App() {
           }}
         />
         <Drawer.Screen
-          name="imagens"
+          name="Requisição chatdata"
           component={Images}
           options={{
             tabBarIcon: ({ color }) => (
@@ -106,6 +118,19 @@ export default function App() {
         <Drawer.Screen
           name="OnTouchStart e OnTouchEnd"
           component={TerceiraPagina}
+          options={{
+            tabBarIcon: ({ color }) => (
+              <MaterialCommunityIcons
+                name="gesture-tap-button"
+                size={45}
+                color={color}
+              />
+            ),
+          }}
+        />
+         <Drawer.Screen
+          name="Text input"
+          component={SetimaPagina}
           options={{
             tabBarIcon: ({ color }) => (
               <MaterialCommunityIcons

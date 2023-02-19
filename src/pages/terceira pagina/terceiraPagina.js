@@ -29,32 +29,40 @@ const TerceiraPagina = (props) => {
         >
           É acionado quando o usuario clica sobre um componente na tela
         </Text>
-        <Text onTouchStart={() => {props.navigation.navigate('imagens')}} 
+        <Text
+          onTouchStart={() => {
+            props.navigation.navigate("Primeira pagina");
+          }}
           style={{
             backgroundColor: "blue",
             fontSize: 25,
             color: "white",
           }}
-        
         >
-          Be-vindo clink nessa componente Text
+          Bem-vindo clink nesse componente Text
         </Text>
 
-        <Image 
-         onTouchEnd={() => {props.navigation.navigate('segunda Pagina')}}
-        style={{
-           width: 250,
-           marginTop:20,
-           height:250
-          }} source={{uri:"https://www.devmedia.com.br/arquivos/cursos/Navegation_RN/new_aula11/9.png"}}/>
-           <Text
+        <Image
+          onTouchEnd={() => {
+            props.navigation.navigate("Containes ScrollView");
+          }}
+          style={{
+            width: 250,
+            marginTop: 20,
+            height: 250,
+          }}
+          source={{
+            uri: "https://www.devmedia.com.br/arquivos/cursos/Navegation_RN/new_aula11/9.png",
+          }}
+        />
+        <Text
           style={{
             backgroundColor: "pink",
             fontSize: 25,
             color: "red",
           }}
         >
-         Clik na imagem para ir pra rota inicial
+          Clik na imagem para ir pra rota inicial
         </Text>
       </View>
     </View>

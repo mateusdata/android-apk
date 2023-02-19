@@ -8,9 +8,11 @@ const SetimaPagina = (props) => {
   const [maximo, setMaximo] = useState(0);
   const [lagsInput, setFlagsInput] = useState(false);
   function alterarNumero() {
-    let numberRandomic = Math.floor(Math.random() * (parseInt(maximo) + 1 - parseInt(minino)) + parseInt(minino));
+    let numberRandomic = Math.floor(
+      Math.random() * (parseInt(maximo) + 1 - parseInt(minino)) +
+        parseInt(minino)
+    );
     setNumber(numberRandomic);
-    
   }
   return (
     <View style={{ flex: 1, alignItems: "center" }}>
@@ -18,7 +20,7 @@ const SetimaPagina = (props) => {
       <Text>Valor Mínimo: </Text>
       <TextInput
         value={minino}
-        onChangeText = { valor => setMinino(valor) }
+        onChangeText={(valor) => setMinino(valor)}
         keyboardType="numeric"
         textAlign="center"
         autoFocus={true}
@@ -41,7 +43,7 @@ const SetimaPagina = (props) => {
       />
       <Text>Valor Maximo: </Text>
       <TextInput
-       value={maximo}
+        value={maximo}
         keyboardType="numeric"
         textAlign="center"
         autoFocus={true}
@@ -82,6 +84,7 @@ const SetimaPagina = (props) => {
           Botão persolalizado
         </Text>
       </Pressable>
+
       <Text
         style={{
           backgroundColor: "blue",
@@ -91,12 +94,13 @@ const SetimaPagina = (props) => {
           alignItems: "center",
           textAlign: "center",
           padding: 40,
-
+          marginBottom: 100,
           fontSize: 50,
         }}
       >
         {number}
       </Text>
+      <Button onPress={()=> props.navigation.goBack()} title="Voltar pra tela home" />
     </View>
   );
 };
